@@ -1,0 +1,76 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap");
+@import "@/styles/_media-mixin.scss";
+
+*,
+*::after,
+*::before,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "DM Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  background-color: var(--bg-color);
+}
+
+main {
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+
+  width: 100%;
+  max-width: 1320px;
+
+  @include media-2xl {
+    max-width: 1200px;
+  }
+
+  @include media-xl {
+    max-width: 1080px;
+  }
+
+  @include media-lg {
+    max-width: 860px;
+  }
+
+  @include media-md {
+    max-width: 670px;
+  }
+
+  @include media-sm {
+    max-width: 100%;
+    padding: 0 30px;
+  }
+}
+
+:root {
+  --color-primary: #38386e;
+  --color-accent: #4141e7;
+  --color-secondary: #9b51e0;
+  --color-primary-dark: #000932;
+}

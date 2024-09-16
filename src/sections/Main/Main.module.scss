@@ -1,0 +1,316 @@
+@import "@/styles/_media-mixin.scss";
+@import "@/styles/_mixins.scss";
+
+.Main {
+  position: relative;
+  padding: 140px 0 190px;
+}
+
+.BigCircle {
+  position: absolute;
+  z-index: -1;
+  right: -345px;
+  top: -410px;
+
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: #54c5f8;
+}
+
+.SmallCircle {
+  position: absolute;
+  z-index: -1;
+  top: 575px;
+  right: -35px;
+
+  width: 160px;
+  height: 160px;
+
+  border-radius: 50%;
+  background-color: #95e167;
+}
+
+.Container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 130px;
+
+  @include media-2xl {
+    grid-template-columns: 580px 560px;
+    column-gap: 80px;
+  }
+}
+
+.Content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+}
+
+.Title {
+  color: #0a2452;
+  font-family: "DM Sans";
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 62px;
+  letter-spacing: 2px;
+
+  .Blue {
+    color: #54c5f8;
+  }
+
+  .Green {
+    color: #95e167;
+  }
+}
+
+.Text {
+  max-width: 520px;
+
+  color: #020c49;
+  font-family: "DM Sans";
+  font-size: 17px;
+  line-height: 24px; /* 141.176% */
+  font-weight: 400;
+  letter-spacing: 0.34px;
+
+  span {
+    font-weight: 700;
+  }
+
+  &.SemiBold {
+    font-weight: 600;
+  }
+}
+
+.List {
+  display: flex;
+  flex-direction: column;
+  row-gap: 36px;
+}
+
+.ListItem {
+  width: 490px;
+
+  display: flex;
+  column-gap: 12px;
+  align-items: flex-start;
+}
+
+.ListIcon {
+  margin-top: 3px;
+  width: 24px;
+  height: auto;
+
+  flex-shrink: 0;
+}
+
+.ListText {
+  color: #020c49;
+  font-family: "DM Sans";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.34px;
+
+  span {
+    font-weight: 600;
+  }
+}
+
+.FormWrapper {
+  padding: 70px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 34px;
+  border: 1px solid #eff0f6;
+  background: #fff;
+  box-shadow: 0px 450px 126px 0px rgba(84, 197, 248, 0),
+    0px 288px 115px 0px rgba(84, 197, 248, 0.01), 0px 162px 97px 0px rgba(84, 197, 248, 0.05),
+    0px 72px 72px 0px rgba(84, 197, 248, 0.09), 0px 18px 40px 0px rgba(84, 197, 248, 0.1);
+}
+
+.FormTitle {
+  width: 350px;
+
+  color: #170f49;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "DM Sans";
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 42px; /* 110.526% */
+  letter-spacing: 1.14px;
+}
+
+.FormLabel {
+  margin-top: 28px;
+
+  color: #0a2452;
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.18px;
+  opacity: 0.6;
+}
+
+.StageWrapper {
+  margin-top: 40px;
+
+  display: flex;
+  align-items: center;
+}
+
+.StageItem {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+
+  &::after {
+    content: "";
+
+    display: block;
+    width: 100px;
+    height: 2px;
+    background: #d1d5db;
+  }
+
+  &:last-child {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.StageCircle {
+  position: relative;
+  z-index: 1;
+  width: 32px;
+  height: auto;
+
+  circle {
+    transition: all 0.3s ease;
+  }
+
+  &.Active {
+    circle {
+      &:first-child {
+        stroke: #54c5f8;
+      }
+
+      &:last-child {
+        fill: #54c5f8;
+      }
+    }
+  }
+}
+
+.Form {
+  margin-top: 48px;
+  // margin-bottom: 80px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 12px;
+}
+
+.FormField {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  row-gap: 24px;
+}
+
+.FormFieldLabel {
+  text-align: center;
+
+  color: #170f49;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "DM Sans";
+  font-size: 16px;
+  line-height: 20px; /* 125% */
+  font-weight: 500;
+}
+
+.PrivacyText {
+  color: #020c49;
+  font-family: "DM Sans";
+  font-size: 12px;
+  line-height: 16px; /* 133.333% */
+  font-weight: 400;
+  letter-spacing: 0.24px;
+}
+
+.FormButtons {
+  // margin-top: auto;
+  margin-top: 64px;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px 28px;
+
+  &.Column {
+    flex-direction: column;
+  }
+}
+
+.FormButton {
+  padding: 16px 38px;
+  height: 56px;
+  width: 100%;
+  max-width: 360px;
+
+  display: none;
+  align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "DM Sans";
+  font-size: 18px;
+  font-weight: 700;
+
+  border-radius: 56px;
+  cursor: pointer;
+
+  &.NextButton,
+  &.ScheduleButton {
+    color: #fff;
+
+    border: 1px solid #54c5f8;
+    background: #54c5f8;
+    box-shadow: 0px 102px 28px 0px rgba(84, 197, 248, 0), 0px 65px 26px 0px rgba(84, 197, 248, 0.01),
+      0px 37px 22px 0px rgba(84, 197, 248, 0.05), 0px 16px 16px 0px rgba(84, 197, 248, 0.09),
+      0px 4px 9px 0px rgba(84, 197, 248, 0.1);
+  }
+
+  &.BackButton {
+    color: #0a2452;
+    font-weight: 500;
+
+    border: 1px solid #0a2452;
+    background-color: #fff;
+  }
+
+  &.Show {
+    display: flex;
+  }
+}
+
+.ArrowNext {
+  width: 24px;
+  height: auto;
+}
