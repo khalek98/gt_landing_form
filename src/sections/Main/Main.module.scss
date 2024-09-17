@@ -4,18 +4,38 @@
 .Main {
   position: relative;
   padding: 140px 0 190px;
+
+  @include media-xs {
+    padding: 128px 0 100px;
+  }
 }
 
 .BigCircle {
   position: absolute;
   z-index: -1;
-  right: -345px;
-  top: -410px;
+  right: -450px;
+  top: -600px;
 
-  width: 800px;
-  height: 800px;
+  width: 1100px;
+  height: 1100px;
   border-radius: 50%;
   background: #54c5f8;
+
+  @include media-2xl {
+    right: -345px;
+    top: -410px;
+
+    width: 800px;
+    height: 800px;
+  }
+
+  @include media-xs {
+    height: 320px;
+    width: 320px;
+
+    right: -110px;
+    top: -244px;
+  }
 }
 
 .SmallCircle {
@@ -29,6 +49,10 @@
 
   border-radius: 50%;
   background-color: #95e167;
+
+  @include media-xs {
+    display: none;
+  }
 }
 
 .Container {
@@ -39,6 +63,12 @@
   @include media-2xl {
     grid-template-columns: 580px 560px;
     column-gap: 80px;
+  }
+
+  @include media-md {
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    row-gap: 68px;
   }
 }
 
@@ -55,6 +85,14 @@
   font-size: 52px;
   line-height: 62px;
   letter-spacing: 2px;
+
+  @include media-xs {
+    margin-top: 22px;
+
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.4px;
+  }
 
   .Blue {
     color: #54c5f8;
@@ -96,6 +134,10 @@
   display: flex;
   column-gap: 12px;
   align-items: flex-start;
+
+  @include media-xs {
+    width: 100%;
+  }
 }
 
 .ListIcon {
@@ -121,7 +163,9 @@
 }
 
 .FormWrapper {
-  padding: 70px 50px;
+  // padding: 70px 50px;
+  padding: 16px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,6 +176,10 @@
   box-shadow: 0px 450px 126px 0px rgba(84, 197, 248, 0),
     0px 288px 115px 0px rgba(84, 197, 248, 0.01), 0px 162px 97px 0px rgba(84, 197, 248, 0.05),
     0px 72px 72px 0px rgba(84, 197, 248, 0.09), 0px 18px 40px 0px rgba(84, 197, 248, 0.1);
+
+  @include media-xs {
+    height: 700px;
+  }
 }
 
 .FormTitle {

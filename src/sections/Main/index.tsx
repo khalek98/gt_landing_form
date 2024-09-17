@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import cn from "classnames";
 import { useRouter } from "next/router";
 import {
@@ -85,6 +86,15 @@ const Main = () => {
       });
   };
 
+  useEffect(() => {
+    // <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    const scriptElem = document.createElement("script");
+    scriptElem.type = "text/javascript";
+    scriptElem.src = "https://assets.calendly.com/assets/external/widget.js";
+    scriptElem.async = true;
+    document.head.append(scriptElem);
+  }, []);
+
   return (
     <>
       <section className={styles.Main}>
@@ -110,14 +120,14 @@ const Main = () => {
               <li className={styles.ListItem}>
                 <CrossIcon className={styles.ListIcon} />
                 <p className={styles.ListText}>
-                  Freelancers juggle multiple projects, focus on the highest bidder.
+                  <span>Freelancers</span> juggle multiple projects, focus on the highest bidder.
                 </p>
               </li>
               <li className={styles.ListItem}>
                 <PlusIcon className={styles.ListIcon} />
                 <p className={styles.ListText}>
-                  Dedicated teams work exclusively on your project. Their priority is your success,
-                  ensuring long-term value.
+                  <span>Dedicated</span> teams work exclusively on your project. Their priority is
+                  your success, ensuring long-term value.
                 </p>
               </li>
             </ul>
@@ -133,7 +143,18 @@ const Main = () => {
           </div>
 
           <div className={styles.FormWrapper}>
-            <h2 className={styles.FormTitle}>Build Your Dream Team with Us</h2>
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/xalek-islam/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
+              style={{
+                minWidth: "320px",
+                height: "100%",
+                width: "100%",
+                borderRadius: 34,
+                overflow: "hidden",
+              }}
+            ></div>
+            {/* <h2 className={styles.FormTitle}>Build Your Dream Team with Us</h2>
             <p className={styles.FormLabel}>Let's get started with your hiring needs</p>
 
             <ul className={styles.StageWrapper}>
@@ -144,9 +165,9 @@ const Main = () => {
                   />
                 </li>
               ))}
-            </ul>
+            </ul> */}
 
-            <form className={styles.Form} onSubmit={handleSubmit(onSubmit)}>
+            {/* <form className={styles.Form} onSubmit={handleSubmit(onSubmit)}>
               {stage === 0 && (
                 <div className={styles.FormField}>
                   <p className={styles.FormFieldLabel}>How many people work at your company?</p>
@@ -185,6 +206,8 @@ const Main = () => {
                       </FormControl>
                     )}
                   />
+
+                
                 </div>
               )}
 
@@ -323,7 +346,7 @@ const Main = () => {
                   Next step
                 </button>
               </div>
-            </form>
+            </form> */}
           </div>
         </div>
       </section>
