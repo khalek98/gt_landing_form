@@ -87,7 +87,6 @@ const Main = () => {
   };
 
   useEffect(() => {
-    // <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
     const scriptElem = document.createElement("script");
     scriptElem.type = "text/javascript";
     scriptElem.src = "https://assets.calendly.com/assets/external/widget.js";
@@ -145,7 +144,7 @@ const Main = () => {
           <div className={styles.FormWrapper}>
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/xalek-islam/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
+              data-url="https://calendly.com/rinat-globalteams/30min?hide_event_type_details=1&hide_gdpr_banner=1"
               style={{
                 minWidth: "320px",
                 height: "100%",
