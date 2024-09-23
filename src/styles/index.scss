@@ -1,6 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,100..1000&display=swap");
-@import "@/styles/_media-mixin.scss";
+@import "./_media-mixin.scss";
+@import "./fonts.scss";
 
 *,
 *::after,
@@ -9,7 +10,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  font-family: "DM Sans", sans-serif;
+  font-family: "Yonet", sans-serif;
   box-sizing: border-box;
 }
 
@@ -73,4 +74,8 @@ button {
   --color-accent: #4141e7;
   --color-secondary: #9b51e0;
   --color-primary-dark: #000932;
+}
+
+[lang="heb"] * {
+  font-family: "Yonet", sans-serif !important;
 }
