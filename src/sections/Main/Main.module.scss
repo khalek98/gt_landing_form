@@ -6,7 +6,7 @@
   padding: 140px 0 190px;
 
   @include media-xs {
-    padding: 128px 0 100px;
+    padding: 90px 0 100px;
   }
 }
 
@@ -86,6 +86,10 @@
   line-height: 62px;
   letter-spacing: 2px;
 
+  &.AlignRight {
+    text-align: right;
+  }
+
   @include media-xs {
     margin-top: 22px;
 
@@ -163,8 +167,7 @@
 }
 
 .FormWrapper {
-  // padding: 70px 50px;
-  padding: 16px;
+  // padding: 16px;
   overflow: hidden;
   display: flex;
   flex-direction: column;

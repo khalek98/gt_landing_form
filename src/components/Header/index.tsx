@@ -47,7 +47,9 @@ const Header = () => {
   return (
     <header className={styles.Header}>
       <div className={cn("container", styles.Container)}>
-        <LogoSVG className={styles.Logo} />
+        <a href="http://www.globalteams.ltd">
+          <LogoSVG className={styles.Logo} />
+        </a>
 
         <div className={cn(styles.LangWrapper, { [styles.Active]: isOpenLang })}>
           <ul className={styles.LangList}>
@@ -66,12 +68,6 @@ const Header = () => {
                 <p className={styles.LangText}>{lang.name}</p>
               </li>
             ))}
-            {/* <li className={styles.LangItem}>
-              <USFlag className={styles.LangFlag} /> <p className={styles.LangText}>EN</p>
-            </li>
-            <li className={styles.LangItem}>
-              <ILFlag className={styles.LangFlag} /> <p className={styles.LangText}>HEB</p>
-            </li> */}
           </ul>
 
           <ArrowIcon
