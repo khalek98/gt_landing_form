@@ -70,8 +70,7 @@ const Main = () => {
             <p className={styles.Text}>
               {
                 mainContent[locale][
-                  `If you're looking to get started quickly, this is your most efficient, cost-effective
-              way to secure top-tier talent.`
+                  "If you're looking to get started quickly, this is your most efficient, cost-effective way to secure top-tier talent."
                 ]
               }
             </p>
