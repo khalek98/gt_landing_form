@@ -57,10 +57,10 @@ const Main = () => {
               <li className={styles.ListItem}>
                 <PlusIcon className={styles.ListIcon} />
                 <p className={styles.ListText}>
-                  <span>{mainContent[locale]["Dedicated"]} </span>
+                  <span>{mainContent[locale]["Dedicated teams"]} </span>
                   {
                     mainContent[locale][
-                      "teams work exclusively on your project. Their priority is your success, ensuring long-term value."
+                      "work exclusively on your project. Their priority is your success, ensuring long-term value."
                     ]
                   }
                 </p>
